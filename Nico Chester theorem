@@ -1,0 +1,14 @@
+n=int(raw_input('Enter number: '))
+m=n*n*n
+k=m/2
+if k%2==0:
+	k=k+1
+for i in range(k,0,-2):
+	s=0
+	for j in range(0,n+10):
+		s+=(i-2*j)
+		if s==m:
+			print '%d * %d * %d = %d = '%(n,n,n,m), 
+			for x in range(i,(i-2*(j-1)),-2):
+				print '%d + '%(x),
+			print '%d'%(i-2*j)
